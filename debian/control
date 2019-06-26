@@ -1,0 +1,22 @@
+Source: createrepo-c
+Priority: optional
+Maintainer: mdepaulo <mdepaulo@unknown>
+Build-Depends: debhelper (>=9)
+Standards-Version: 3.9.6
+Section: libs
+Homepage: <insert the upstream URL, if relevant>
+#Vcs-Git: git://anonscm.debian.org/collab-maint/createrepo-c.git
+#Vcs-Browser: https://anonscm.debian.org/cgit/collab-maint/createrepo-c.git
+
+Package: createrepo-c-dev
+Section: libdevel
+Architecture: any
+Depends: createrepo-cBROKEN (= ${binary:Version}), ${misc:Depends}
+Description: <insert up to 60 chars description>
+ <insert long description, indented with spaces>
+
+Package: createrepo-cBROKEN
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: <insert up to 60 chars description>
+ <insert long description, indented with spaces>
