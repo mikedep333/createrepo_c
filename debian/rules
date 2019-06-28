@@ -15,7 +15,7 @@
 
 
 %:
-	dh $@ 
+	dh $@ --buildsystem=cmake
 
 
 # dh_make generated override targets
@@ -23,3 +23,9 @@
 #override_dh_auto_configure:
 #	dh_auto_configure -- #	-DCMAKE_LIBRARY_PATH=$(DEB_HOST_MULTIARCH)
 
+#override_dh_auto_configure:
+#	mkdir build-py3
+#	pushd build-py3
+#		dh_auto_configure -- 
+override_dh_auto_configure:
+		dh_auto_configure -- -DPYTHON_DESIRED:FILEPATH=/usr/bin/python3
